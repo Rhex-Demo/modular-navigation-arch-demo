@@ -13,14 +13,23 @@
 
         <action
             android:id="@+id/actionOpenRegistration"
-            app:destination="@id/SecondFragment" />
+            app:destination="@id/registrationFragment" />
+        <action
+            android:id="@+id/actionShowError"
+            app:destination="@id/issueFragment" />
 
     </fragment>
 
     <fragment
-        android:id="@+id/SecondFragment"
+        android:id="@+id/registrationFragment"
         android:name="com.rhexgomez.demo.authnavigationarch.RegistrationFragment"
         android:label="@string/second_fragment_label"
         tools:layout="@layout/fragment_register" />
+
+    <fragment
+        android:id="@+id/issueFragment"
+        android:name="com.rhexgomez.demo.authnavigationarch.IssueFragment"
+        android:label="IssueFragment"
+        tools:layout="@layout/fragment_issue" />
 
 </navigation>

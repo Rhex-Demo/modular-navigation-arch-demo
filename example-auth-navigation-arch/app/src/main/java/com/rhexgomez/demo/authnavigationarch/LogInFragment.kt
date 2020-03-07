@@ -14,5 +14,9 @@ class LogInFragment : Fragment(R.layout.fragment_log_in) {
         register.setOnClickListener {
             findNavController().navigate(LogInFragmentDirections.actionOpenRegistration())
         }
+
+        next.setOnClickListener {
+            findNavController().navigate(LogInFragmentDirections.actionShowError())
+        }
     }
 }
