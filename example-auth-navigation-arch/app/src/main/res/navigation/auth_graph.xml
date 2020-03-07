@@ -9,12 +9,18 @@
         android:id="@+id/logInFragment"
         android:name="com.rhexgomez.demo.authnavigationarch.LogInFragment"
         android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_log_in"/>
+        tools:layout="@layout/fragment_log_in">
+
+        <action
+            android:id="@+id/actionOpenRegistration"
+            app:destination="@id/SecondFragment" />
+
+    </fragment>
 
     <fragment
         android:id="@+id/SecondFragment"
-        android:name="com.rhexgomez.demo.authnavigationarch.SecondFragment"
+        android:name="com.rhexgomez.demo.authnavigationarch.RegistrationFragment"
         android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second"/>
+        tools:layout="@layout/fragment_register" />
 
 </navigation>
