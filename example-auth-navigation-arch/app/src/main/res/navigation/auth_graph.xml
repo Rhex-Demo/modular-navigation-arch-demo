@@ -14,9 +14,14 @@
         <action
             android:id="@+id/actionOpenRegistration"
             app:destination="@id/registrationFragment" />
+
         <action
             android:id="@+id/actionShowError"
             app:destination="@id/issueFragment" />
+
+        <action
+            android:id="@+id/actionGotoHome"
+            app:destination="@id/homeFragment" />
 
     </fragment>
 
@@ -24,12 +29,24 @@
         android:id="@+id/registrationFragment"
         android:name="com.rhexgomez.demo.authnavigationarch.RegistrationFragment"
         android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_register" />
+        tools:layout="@layout/fragment_register">
+
+        <action
+            android:id="@+id/actionGotoHome"
+            app:destination="@id/homeFragment" />
+
+    </fragment>
 
     <fragment
         android:id="@+id/issueFragment"
         android:name="com.rhexgomez.demo.authnavigationarch.IssueFragment"
         android:label="IssueFragment"
         tools:layout="@layout/fragment_issue" />
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.rhexgomez.demo.authnavigationarch.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home" />
 
 </navigation>

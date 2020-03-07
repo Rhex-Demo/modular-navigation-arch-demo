@@ -16,7 +16,10 @@ class LogInFragment : Fragment(R.layout.fragment_log_in) {
         }
 
         next.setOnClickListener {
-            findNavController().navigate(LogInFragmentDirections.actionShowError())
+            if (username.text!!.isNotEmpty() && password.text!!.isNotEmpty())
+                findNavController().navigate(LogInFragmentDirections.actionGotoHome())
+            else
+                findNavController().navigate(LogInFragmentDirections.actionShowError())
         }
     }
 }
