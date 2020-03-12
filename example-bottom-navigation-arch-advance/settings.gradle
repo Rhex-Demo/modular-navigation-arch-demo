@@ -1,0 +1,4 @@
+include ':dashboard'
+include ':home'
+include ':app'
+rootProject.name = "Bottom Navigation Basic"
